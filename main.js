@@ -1,5 +1,5 @@
 const Destination = async(name)=>{
-    console.log("Checking the Services..")
+    console.log("Checking the Services..❉")
     const Finding= await fetch('https://raw.githubusercontent.com/Tekikathik/data/refs/heads/main/data.json')
     const data=await Finding.json();
 
@@ -14,7 +14,7 @@ const Destination = async(name)=>{
             }
         }
         if (c==0){
-            console.log("No rider is available in the city Sry..☒")
+            console.log("No rider is available in the city Sry..❎")
         }
         else {
             console.log("Rider is Founded .✅")
@@ -26,7 +26,7 @@ const Destination = async(name)=>{
 
     }
     else{
-        console.log("We don't Provide any Services.☒")
+        console.log("We don't Provide any Services.❎")
     }
 }
 
