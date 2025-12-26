@@ -1,6 +1,9 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.2.1",
+    "mongoose": "^9.0.2",
+    "mongoose-sequence": "^6.0.1",
     "prompt-sync": "^4.2.0"
   },
   "name": "backend",
