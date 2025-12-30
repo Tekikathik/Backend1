@@ -1,6 +1,4 @@
 import student from "../models/user.js";
-
-
 const getStudentsDetails = (req, res) => {
     const mydata = {name: "thub", roll:"1234"};
     res.send(mydata);
@@ -17,4 +15,11 @@ const addStudents = async (req,res)=>{
 
     }
 };
-export {getStudentsDetails, addStudents};
+const updataStudents =async(req,res)=>{
+    const {id} =req.params;
+    const data=req.body;
+    console.log("Data");
+    await student.findOneAndUpdate({stuid:id},data,{new:true})
+    return res.status(200).json("message : User updated");
+}
+export {getStudentsDetails, addStudents,updataStudents};
